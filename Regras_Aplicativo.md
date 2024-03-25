@@ -4,9 +4,11 @@ Primeiro Push:
 
   -> Relacionamento entre tabelas 1->1
 
+
 Segundo Push:
 
   -> Relacionamento entre Tabelas 1->Muitos
+
 
 Terceiro Push:
 
