@@ -1,13 +1,13 @@
 Primeiro Push:
 
--> Criação da Ligação com SQL SERVER
+  -> Criação da Ligação com SQL SERVER
 
--> Relacionamento entre tabelas 1->1
+  -> Relacionamento entre tabelas 1->1
 
 Segundo Push:
 
--> Relacionamento entre Tabelas 1->Muitos
+  -> Relacionamento entre Tabelas 1->Muitos
 
 Terceiro Push:
 
--> Relacionamento entre Tabelas Muitos->Muitos
+  -> Relacionamento entre Tabelas Muitos->Muitos
