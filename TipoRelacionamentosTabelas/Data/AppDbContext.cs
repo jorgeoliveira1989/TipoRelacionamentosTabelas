@@ -13,6 +13,7 @@ namespace TipoRelacionamentosTabelas.Data
 
         public DbSet<casaModel> Casas { get; set; }
         public DbSet<moradaModel> Moradas { get; set; }
+        public DbSet<MoradorModel> Moradores { get; set; }
 
     }
 }

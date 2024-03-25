@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TipoRelacionamentosTabelas.Data;
 
@@ -10,9 +11,11 @@ using TipoRelacionamentosTabelas.Data;
 namespace TipoRelacionamentosTabelas.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240325122105_CriarTabelaMorador")]
+    partial class CriarTabelaMorador
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -20,21 +23,6 @@ namespace TipoRelacionamentosTabelas.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("MoradorModelcasaModel", b =>
-                {
-                    b.Property<int>("CasasId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MoradoresId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CasasId", "MoradoresId");
-
-                    b.HasIndex("MoradoresId");
-
-                    b.ToTable("MoradorModelcasaModel");
-                });
 
             modelBuilder.Entity("TipoRelacionamentosTabelas.Models.MoradorModel", b =>
                 {
@@ -116,21 +104,6 @@ namespace TipoRelacionamentosTabelas.Migrations
                     b.HasIndex("CasaId");
 
                     b.ToTable("quartoModel");
-                });
-
-            modelBuilder.Entity("MoradorModelcasaModel", b =>
-                {
-                    b.HasOne("TipoRelacionamentosTabelas.Models.casaModel", null)
-                        .WithMany()
-                        .HasForeignKey("CasasId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TipoRelacionamentosTabelas.Models.MoradorModel", null)
-                        .WithMany()
-                        .HasForeignKey("MoradoresId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("TipoRelacionamentosTabelas.Models.moradaModel", b =>

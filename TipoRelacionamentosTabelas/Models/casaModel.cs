@@ -6,5 +6,6 @@
         public  string Descricao { get; set; }
         public moradaModel Morada { get; set; }
         public List<quartoModel> Quartos { get; set; }
+        public List<MoradorModel> Moradores { get; set;}
     }
 }
